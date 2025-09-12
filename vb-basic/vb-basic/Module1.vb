@@ -3,7 +3,8 @@ Module Module1
     ' Dentro de los módulo tenemos "sub rutinas"
     Sub Main()
         Console.WriteLine("Hola mundo")
-
+        Console.WriteLine("Presiona una letra")
+        Console.ReadKey()
     End Sub
 
 End Module
