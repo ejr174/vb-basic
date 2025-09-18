@@ -84,7 +84,20 @@ Module Module1
         Dim numDouble = Double.Parse(numString1)
 
 
+        ' -------------- 
+        ' OPERADORES LOGICOS : Or, & And, Not
+        ' -------------- 
+        Dim a = True
+        Dim b = False
 
+        Dim resultadoOperadorOr = a Or b 'True
+        Dim resultadoOperadorAnd = a And b ' Falsa
+        'Dim resultadoOperadorNot = a Not b
+
+
+        Console.WriteLine("resultadoOperadorOr = " & resultadoOperadorOr)
+        Console.WriteLine("resultadoOperadorAnd = " & resultadoOperadorAnd)
+        ' Console.WriteLine("resultadoOperadorNot = " & resultadoOperadorNot)
 
         ' ----------------------------------
         'Metodo para mantener la consola abierta hasta que presione una letra
