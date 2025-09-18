@@ -67,6 +67,24 @@ Module Module1
         Console.WriteLine("Reemplazar de mni pagina el .com por .mx = " & miPagina.Replace(".com", ".mx"))
 
 
+        ' -------------- 
+        ' PROPIEDAD Parse : Permite cambiar el tipo de dato
+        ' -------------- 
+
+        Dim numString1 = "15.66"
+        Dim numString2 = 15
+
+        ' De STRING a INT
+        Dim numInt = Integer.Parse(numString2)
+
+        ' De STRING a FLOAT
+        Dim numFloat = Single.Parse(numString1)
+
+        ' De STRING a DOUBLE
+        Dim numDouble = Double.Parse(numString1)
+
+
+
 
         ' ----------------------------------
         'Metodo para mantener la consola abierta hasta que presione una letra
