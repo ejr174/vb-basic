@@ -50,6 +50,24 @@ Module Module1
         'Declaración implícitas: Variables sin declarar, su tipo de dato se define apartir del valor MÁS GRANDE que se le asigne. Ejemplo:
         Dim nombre2 = "Juan"
 
+
+        ' -------------- 
+        ' TIPO DE DATO STRING
+        ' -------------- 
+        Dim miPagina = "paginaWeb.com"
+        Dim presentacionPagina = "Mi pagina web es de ejemplo: "
+
+        'Convertir a mayuscula       
+        Console.WriteLine("String en mayuscula = " & miPagina.ToUpper())
+
+        'Convertir a minuscula
+        Console.WriteLine("String en minuscula = " & miPagina.ToLower())
+
+        'Reemplazar el .com por un .mx
+        Console.WriteLine("Reemplazar de mni pagina el .com por .mx = " & miPagina.Replace(".com", ".mx"))
+
+
+
         ' ----------------------------------
         'Metodo para mantener la consola abierta hasta que presione una letra
         Console.ReadKey() 'También podríamos utiliza Console.Read() Console.ReadLine()
