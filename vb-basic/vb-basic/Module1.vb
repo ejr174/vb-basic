@@ -41,6 +41,16 @@ Module Module1
         Dim sumTotal = sumVarInt + sumVarDouble + valorFloat
         Console.WriteLine("La suma de los totales de las varias int y double fue: " & sumTotal & "Y el tipo de dato de la suma es: " & sumTotal.GetType.ToString())
 
+        ' -------------- 
+        ' DECLARACIÓN IMPLÍCITA Y EXPLÍCITA
+        ' -------------- 
+        'Declaración explícitas: Indica al IDE  cómo se llama y de que tipo son. Ejemplo:
+        Dim nombre As String = "Emmanuel"
+
+        'Declaración implícitas: Variables sin declarar, su tipo de dato se define apartir del valor MÁS GRANDE que se le asigne. Ejemplo:
+        Dim nombre2 = "Juan"
+
+        ' ----------------------------------
         'Metodo para mantener la consola abierta hasta que presione una letra
         Console.ReadKey() 'También podríamos utiliza Console.Read() Console.ReadLine()
 
