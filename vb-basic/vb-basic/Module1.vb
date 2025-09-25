@@ -99,6 +99,13 @@ Module Module1
         Console.WriteLine("resultadoOperadorAnd = " & resultadoOperadorAnd)
         ' Console.WriteLine("resultadoOperadorNot = " & resultadoOperadorNot)
 
+        'Constantes: Es un valor que no cambiara en el flujo de nuestro codigo
+        Const PI = 3.14
+        Const idUser = 960505
+
+        Console.WriteLine("-----------------")
+        Console.WriteLine("Pi = " & PI & " y el id es = " & idUser)
+
         ' ----------------------------------
         'Metodo para mantener la consola abierta hasta que presione una letra
         Console.ReadKey() 'También podríamos utiliza Console.Read() Console.ReadLine()
