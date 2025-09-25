@@ -128,6 +128,8 @@ Module Module1
         Console.WriteLine("---------- Sub rutina ----")
         saludo("Enrique Manuel")
 
+        Console.WriteLine("------------ EJERCICIO 1 -----------")
+        ejercicio1()
         ' ----------------------------------
         'Metodo para mantener la consola abierta hasta que presione una letra
         Console.ReadKey() 'También podríamos utiliza Console.Read() Console.ReadLine()
@@ -136,6 +138,19 @@ Module Module1
 
     Sub saludo(ByVal nombre As String)
         Console.WriteLine("Un saludo muy especial para " & nombre & " desde la sub rutina saludo()")
+    End Sub
+
+    'Ejercicio 1: Concatenar y flujo del codigo vb
+    Public Sub ejercicio1()
+        Dim name As String = "Trunks"
+        Dim apellido As String = "Brief"
+        Dim nombreCompleto = name + " " + apellido
+
+        Console.WriteLine("Nombre completo inicial: " & nombreCompleto)
+
+        apellido = "Principe Saiyajins"
+        nombreCompleto = name + " " + apellido
+        Console.WriteLine("Nombre completo modificado: " & nombreCompleto)
     End Sub
 
 End Module
