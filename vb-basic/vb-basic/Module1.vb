@@ -130,6 +130,9 @@ Module Module1
 
         Console.WriteLine("------------ EJERCICIO 1 -----------")
         ejercicio1()
+
+        Console.WriteLine("------------ EJERCICIO 2 -----------")
+        ejercicio2(1996)
         ' ----------------------------------
         'Metodo para mantener la consola abierta hasta que presione una letra
         Console.ReadKey() 'También podríamos utiliza Console.Read() Console.ReadLine()
@@ -151,6 +154,17 @@ Module Module1
         apellido = "Principe Saiyajins"
         nombreCompleto = name + " " + apellido
         Console.WriteLine("Nombre completo modificado: " & nombreCompleto)
+    End Sub
+
+    ' Ejercicio 2: Mostrar la edad del usuario
+    Sub ejercicio2(ByVal nacimiento As Integer)
+        Dim anioActual = DateTime.Now.Year
+        Dim anioNacimiento = nacimiento
+
+        Dim edad = anioActual - anioNacimiento
+
+        Console.WriteLine("La edad del usuario nacido en el año " & anioNacimiento & " es de " & edad & " años.")
+
     End Sub
 
 End Module
