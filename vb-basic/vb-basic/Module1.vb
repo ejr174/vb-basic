@@ -103,8 +103,18 @@ Module Module1
         Const PI = 3.14
         Const idUser = 960505
 
-        Console.WriteLine("-----------------")
+        Console.WriteLine("-------- Constantes ---------")
         Console.WriteLine("Pi = " & PI & " y el id es = " & idUser)
+
+        'Operadores aritmetico: Sirven para realizar operaicones matematicas + - * / %
+        Dim num1 = 3, num2 = 2
+        Dim suma = num1 + num2
+        Dim resta = num1 - num2
+        Dim residuo = num1 Mod num2 ' % -> Residuo  en vb  es mod
+
+        Console.WriteLine("---------- Operadores aritmeticos ----")
+        Console.WriteLine("Suma de " & num1 & " + " & num2 & " es = " & suma)
+
 
         ' ----------------------------------
         'Metodo para mantener la consola abierta hasta que presione una letra
