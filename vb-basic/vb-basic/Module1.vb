@@ -116,10 +116,26 @@ Module Module1
         Console.WriteLine("Suma de " & num1 & " + " & num2 & " es = " & suma)
 
 
+        ' Sub rutina: Es un bloque de codigo  que contiene instrucciones.
+        ' Un programa ejecuta las intrucciones llamando la sub y especificando los argumento necesarios
+        ' Sintaxis:
+        'Public Sub nombreSubRutina(argumentos)
+        '    '       Cuerpo instrucciones sub rutina
+        'End Sub
+        'Llado de la subrutina; nombreSubRutina(parametros)
+
+
+        Console.WriteLine("---------- Sub rutina ----")
+        saludo("Enrique Manuel")
+
         ' ----------------------------------
         'Metodo para mantener la consola abierta hasta que presione una letra
         Console.ReadKey() 'También podríamos utiliza Console.Read() Console.ReadLine()
 
+    End Sub
+
+    Sub saludo(ByVal nombre As String)
+        Console.WriteLine("Un saludo muy especial para " & nombre & " desde la sub rutina saludo()")
     End Sub
 
 End Module
