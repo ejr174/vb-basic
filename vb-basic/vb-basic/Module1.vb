@@ -133,6 +133,11 @@ Module Module1
 
         Console.WriteLine("------------ EJERCICIO 2 -----------")
         ejercicio2(1996)
+
+        Console.WriteLine("------------ EJERCICIO 2 Refactorizado de SUB -> FUNCTION -----------")
+
+        Dim edadUsuario = calculaEdad(1997)
+        Console.WriteLine("La edad del usuario en la refactorizacion del metodo SUB -> FUNCTION es de: " & edadUsuario)
         ' ----------------------------------
         'Metodo para mantener la consola abierta hasta que presione una letra
         Console.ReadKey() 'También podríamos utiliza Console.Read() Console.ReadLine()
@@ -166,5 +171,17 @@ Module Module1
         Console.WriteLine("La edad del usuario nacido en el año " & anioNacimiento & " es de " & edad & " años.")
 
     End Sub
+
+    'Sub VS Function: Ambas permiten contenter un bloque de codigo que puede ser re utilizado.
+    ' La diferencia principal es que Function retorna un valor y Sub no.
+
+    'Esta es una refactorizacion de la sub "ejercicio2()" 
+    Function calculaEdad(ByVal anioNacimiento As Integer)
+        Dim anioActual = DateTime.Now.Year
+
+        Dim edad = anioActual - anioNacimiento
+
+        Return edad
+    End Function
 
 End Module
