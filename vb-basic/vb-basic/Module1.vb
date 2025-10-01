@@ -144,6 +144,9 @@ Module Module1
         Console.WriteLine("------------ datosPorConsola() -----------")
         datosPorConsola()
 
+        Console.WriteLine("------------ CondicionalesIf() -----------")
+        CondicionalesIf(8.8)
+
         'Metodo para mantener la consola abierta hasta que presione una letra
         Console.ReadKey() 'También podríamos utiliza Console.Read() Console.ReadLine()
 
@@ -204,5 +207,22 @@ Module Module1
 
         Console.WriteLine("La edad de " & nombre & " es de: " & edad & " y tiene un sueldo de: " & sueldo)
 
+    End Sub
+
+    'Condicionales If - ElseIf - Else
+    Sub CondicionalesIf(ByVal calificacion As Double)
+
+        Dim calificacionRedondeada = Convert.ToInt32(Math.Round(calificacion))
+
+        If calificacionRedondeada >= 0 AndAlso calificacionRedondeada <= 5 Then
+            Console.WriteLine("Jodaaaaaaa, el estudiante perdió el año :(")
+        ElseIf calificacionRedondeada >= 6 AndAlso calificacionRedondeada <= 9 Then
+            Console.WriteLine("Bien papi, el estudiante aprobó el año :)")
+        ElseIf calificacionRedondeada = 10 Then
+            Console.WriteLine("Este muchacho me llena de orgullo, tuvo la nota maxima")
+        Else
+            Console.WriteLine("Parcero, el valor ingresado no corresponde a una califación válida, chupa monda")
+
+        End If
     End Sub
 End Module
