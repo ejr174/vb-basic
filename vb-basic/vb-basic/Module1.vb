@@ -139,6 +139,11 @@ Module Module1
         Dim edadUsuario = calculaEdad(1997)
         Console.WriteLine("La edad del usuario en la refactorizacion del metodo SUB -> FUNCTION es de: " & edadUsuario)
         ' ----------------------------------
+
+        '--------------------
+        Console.WriteLine("------------ datosPorConsola() -----------")
+        datosPorConsola()
+
         'Metodo para mantener la consola abierta hasta que presione una letra
         Console.ReadKey() 'También podríamos utiliza Console.Read() Console.ReadLine()
 
@@ -184,4 +189,20 @@ Module Module1
         Return edad
     End Function
 
+    ' Ingresar datos en consola: Para poder LEER los datos mediante la consola se utiliza la funcion Console.ReadLine()
+    Sub datosPorConsola()
+        Console.WriteLine("Ingresa tu nombre")
+        Dim nombre = Console.ReadLine()
+
+        Console.WriteLine(nombre & " en que año naciste?")
+        Dim añoNacimiento = Integer.Parse(Console.ReadLine())
+
+        Dim edad = DateTime.Now.Year - añoNacimiento
+
+        Console.WriteLine(nombre & " cuanto ganas?")
+        Dim sueldo As Single = Single.Parse(Console.ReadLine())
+
+        Console.WriteLine("La edad de " & nombre & " es de: " & edad & " y tiene un sueldo de: " & sueldo)
+
+    End Sub
 End Module
