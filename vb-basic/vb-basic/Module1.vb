@@ -142,10 +142,27 @@ Module Module1
 
         '--------------------
         Console.WriteLine("------------ datosPorConsola() -----------")
-        datosPorConsola()
+        'datosPorConsola()
 
         Console.WriteLine("------------ CondicionalesIf() -----------")
-        CondicionalesIf(8.8)
+        ' CondicionalesIf(8.8)
+
+
+        Console.WriteLine("------------ Select case -----------")
+        'Select Case: Sintaxis = Select Case opcion -> Case 1 -> Sección de cosido || Case 2 -> Sección de codigo
+        Console.WriteLine("Ingresa un numero de 1 a 7")
+        Dim num = Integer.Parse(Console.ReadLine())
+
+        Select Case num
+            Case 1
+                Console.WriteLine("El numero seleccionado es = " & num & " y representa el lunes")
+            Case 2
+                Console.WriteLine("El numero seleccionado es = " & num & " y representa el martes")
+            Case 3
+                Console.WriteLine("El numero seleccionado es = " & num & " y representa el miercoles")
+            Case Else
+                Console.WriteLine("El numero seleccionado es = " & num & " pero no representa nada")
+        End Select
 
         'Metodo para mantener la consola abierta hasta que presione una letra
         Console.ReadKey() 'También podríamos utiliza Console.Read() Console.ReadLine()
@@ -225,4 +242,6 @@ Module Module1
 
         End If
     End Sub
+
+
 End Module
