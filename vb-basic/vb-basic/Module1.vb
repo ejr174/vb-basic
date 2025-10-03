@@ -164,9 +164,34 @@ Module Module1
                 Console.WriteLine("El numero seleccionado es = " & num & " pero no representa nada")
         End Select
 
-        'Metodo para mantener la consola abierta hasta que presione una letra
-        Console.ReadKey() 'También podríamos utiliza Console.Read() Console.ReadLine()
 
+        Console.WriteLine("------------ Exepciones - Try - Catch -----------")
+        'Excepciones: Indican los problemas que se generan en nuestro codigo durante la ejecución.
+        'Sintaxis : Try (intentar) - Catch ex As Exception (detectar-cacher) -> en ex guardamos el error
+        'Try
+        '    'Nuestor codigo
+        'Catch ex As Exception
+        '    ' En caso de existar un error
+        'Finally 'Opcional
+        '    'Se ejecuta en cualquiera de los casos
+        'End Try
+
+        Try
+            Console.WriteLine("Por favor ingresa un número")
+            Dim numString = Console.ReadLine()
+            Dim numInteger = Integer.Parse(numString)
+
+            Console.WriteLine("El valor ingresado es " & numInteger)
+        Catch ex As Exception
+            Console.WriteLine("Debe ingresar un valor númerico: " & ex.ToString())
+        Finally ' Si ocurre algo aqui  podemos cerrar cualquier hilo de datos que quedara abierto
+            Console.WriteLine("Se ejecuto finally")
+        End Try
+
+
+        '--------------------------------------------------------------------------------------
+        'Metodo para mantener la consola abierta hasta que presione una letra
+        Console.ReadKey() 'También podríamos utiliza Console.Read() Console.ReadLine() 
     End Sub
 
     Sub saludo(ByVal nombre As String)
