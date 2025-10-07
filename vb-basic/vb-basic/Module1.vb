@@ -188,6 +188,9 @@ Module Module1
             Console.WriteLine("Se ejecuto finally")
         End Try
 
+        Console.WriteLine("------------ Practica menu -----------")
+        MenuBancario()
+
 
         '--------------------------------------------------------------------------------------
         'Metodo para mantener la consola abierta hasta que presione una letra
@@ -268,5 +271,47 @@ Module Module1
         End If
     End Sub
 
+    Public Sub MenuBancario()
 
+        Try
+            Dim saldoUsuario As Double = 100
+            Console.WriteLine("Bienvenido al banco de mañe")
+            Console.WriteLine("Selecciona una opción")
+            Console.WriteLine("1- Ver saldo")
+            Console.WriteLine("2- Ingresar dinero")
+            Console.WriteLine("3- Sacar dinero")
+            Console.WriteLine("4- Salir")
+
+            Dim opcionSeleccionada As Integer = Integer.Parse(Console.ReadLine())
+            Dim saldoIngresado As Double
+            Dim saldoRetirado As Double
+
+            Select Case opcionSeleccionada
+                Case 1
+                    Console.WriteLine("Su saldo es de: $" & saldoUsuario)
+                Case 2
+                    Console.WriteLine("Ingrese el valor a ingresar...")
+                    saldoIngresado = Double.Parse(Console.ReadLine())
+
+                    saldoUsuario = saldoUsuario + saldoIngresado
+
+                    Console.WriteLine("Su saldo actual es de $ " & saldoUsuario)
+                Case 3
+                    Console.WriteLine("Cuanto vas a retirar?")
+                    saldoRetirado = Double.Parse(Console.ReadLine())
+
+                    saldoUsuario = saldoUsuario - saldoRetirado
+
+                    Console.WriteLine("Su saldo actual es de $ " & saldoUsuario)
+                Case 4
+                    Console.WriteLine("Gracias por visitarnos")
+                Case Else
+                    Console.WriteLine("No selecciono una opción valida, agvado")
+            End Select
+
+        Catch ex As Exception
+            Console.WriteLine("Ocurrio un error: " & ex.ToString())
+        End Try
+
+    End Sub
 End Module
