@@ -300,9 +300,13 @@ Module Module1
                     Console.WriteLine("Cuanto vas a retirar?")
                     saldoRetirado = Double.Parse(Console.ReadLine())
 
-                    saldoUsuario = saldoUsuario - saldoRetirado
+                    If saldoRetirado > saldoUsuario Then
+                        Console.WriteLine("Lo sentimos, no cuentas con fondos suficientes")
+                    Else
+                        saldoUsuario = saldoUsuario - saldoRetirado
+                        Console.WriteLine("Su saldo actual es de $ " & saldoUsuario)
+                    End If
 
-                    Console.WriteLine("Su saldo actual es de $ " & saldoUsuario)
                 Case 4
                     Console.WriteLine("Gracias por visitarnos")
                 Case Else
