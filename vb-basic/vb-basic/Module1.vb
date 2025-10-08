@@ -194,6 +194,9 @@ Module Module1
 
         Console.WriteLine("------------ Practica Copndiciones anidades -----------")
         EjercicioCondicionesAnidadas()
+
+        Console.WriteLine("------------ Metodo random -----------")
+        metodoRandom()
         '--------------------------------------------------------------------------------------
         'Metodo para mantener la consola abierta hasta que presione una letra
         Console.ReadKey() 'También podríamos utiliza Console.Read() Console.ReadLine() 
@@ -339,4 +342,21 @@ Module Module1
             Console.WriteLine("Error -> " & ex.Message)
         End Try
     End Sub
+
+    Public Sub metodoRandom()
+        ' La funcion random se utiliza principalmente para obtener un valor aleatorio. Puede recibir 0,1 o 2 parámetros
+        ' Si se pasa 0 parametros entrega un numero aleatorio entre 0 y 32.000.000 
+        ' Si se pasa 1 parametros entrega un numero aleatorio entre 0 hasta el numero ingresado -1 
+        ' Si se pasa 2 parametros entrega un numero aleatorio entre el primer parametro y el segundo-1
+        ' Sintaxis:
+        Dim rand = New Random()
+
+        Dim num1 = rand.Next
+        Dim num2 = rand.Next(8)
+        Dim num3 = rand.Next(8, 18)
+
+        Console.WriteLine("El número generado es = " & num3)
+    End Sub
+
 End Module
+
