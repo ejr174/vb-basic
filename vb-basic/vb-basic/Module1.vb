@@ -192,6 +192,8 @@ Module Module1
         MenuBancario()
 
 
+        Console.WriteLine("------------ Practica Copndiciones anidades -----------")
+        EjercicioCondicionesAnidadas()
         '--------------------------------------------------------------------------------------
         'Metodo para mantener la consola abierta hasta que presione una letra
         Console.ReadKey() 'También podríamos utiliza Console.Read() Console.ReadLine() 
@@ -316,6 +318,25 @@ Module Module1
         Catch ex As Exception
             Console.WriteLine("Ocurrio un error: " & ex.ToString())
         End Try
+    End Sub
 
+    Public Sub EjercicioCondicionesAnidadas()
+        Try
+            Console.WriteLine("Ingrese un valor entre 1 y 999")
+            Dim valorIngresado As Integer = Integer.Parse(Console.ReadLine())
+
+            If valorIngresado >= 1 And valorIngresado <= 9 Then
+                Console.WriteLine("El valor " & valorIngresado & " es UNIDAD")
+            ElseIf valorIngresado >= 10 And valorIngresado <= 99 Then
+                Console.WriteLine("El valor " & valorIngresado & " es DECENA")
+            ElseIf valorIngresado >= 100 And valorIngresado <= 999 Then
+                Console.WriteLine("El valor " & valorIngresado & " es CENTENA")
+            Else
+                Console.WriteLine("El valor " & valorIngresado & " No cumple")
+            End If
+
+        Catch ex As Exception
+            Console.WriteLine("Error -> " & ex.Message)
+        End Try
     End Sub
 End Module
