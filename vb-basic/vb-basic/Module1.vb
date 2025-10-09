@@ -197,6 +197,9 @@ Module Module1
 
         Console.WriteLine("------------ Metodo random -----------")
         metodoRandom()
+
+        Console.WriteLine("------------ Ciclo While -----------")
+        CicloWhile()
         '--------------------------------------------------------------------------------------
         'Metodo para mantener la consola abierta hasta que presione una letra
         Console.ReadKey() 'También podríamos utiliza Console.Read() Console.ReadLine() 
@@ -356,6 +359,16 @@ Module Module1
         Dim num3 = rand.Next(8, 18)
 
         Console.WriteLine("El número generado es = " & num3)
+    End Sub
+
+    Public Sub CicloWhile()
+        ' Los ciclo while (mientras) son una estructura ciclica que nos permite ejecutar una o varias lineas de manera repetitiva
+        Dim i = 1
+
+        While i <= 12
+            Console.WriteLine("i = " & i)
+            i += 1
+        End While
     End Sub
 
 End Module
