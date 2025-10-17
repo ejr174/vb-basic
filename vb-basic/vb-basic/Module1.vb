@@ -203,6 +203,11 @@ Module Module1
 
         Console.WriteLine("------------ Arreglos -----------")
         Arreglos()
+
+        Console.WriteLine("------------ Foreach -----------")
+        Foreach()
+
+
         '--------------------------------------------------------------------------------------
         'Metodo para mantener la consola abierta hasta que presione una letra
         Console.ReadKey() 'También podríamos utiliza Console.Read() Console.ReadLine() 
@@ -385,6 +390,29 @@ Module Module1
 
         For i = 0 To arreglo.Length - 1
             Console.WriteLine("El valor del elemento es: " & arreglo(i) & " en el indice " & i + 1)
+        Next
+    End Sub
+
+    Sub Foreach()
+        ' El foreach, es conocido como un For mejorado. Este se utiliza para iterar sobre una colección o elemento iterable.
+        ' No tenemos acceso al indice (generalmente).
+        ' Nos interesas acceder a los elementos de UNO en UNO y generalmente en orden.
+
+        Dim personajes = New String() {"Uzui", "Vegueta", "Itachi", "Akaza"}
+
+        Console.WriteLine("Con For")
+        For i = 0 To personajes.Length - 1
+            Console.WriteLine("El listado de personajes es: " & personajes(i))
+        Next
+
+
+        Console.WriteLine("Con Foreach")
+        'Dim j = 0
+        For Each personaje As String In personajes ' Se puede eliminar el tipo de dato de "personaje" ya que VB lo puede inferir
+            Console.WriteLine("El listado de personajes es: " & personaje)
+
+            'Si necesita el indice descomentar pero no es recomendado, si necesita indice utilizar For normal
+            'j += 1
         Next
     End Sub
 
