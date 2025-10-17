@@ -200,6 +200,9 @@ Module Module1
 
         Console.WriteLine("------------ Ciclo While -----------")
         CicloWhile()
+
+        Console.WriteLine("------------ Arreglos -----------")
+        Arreglos()
         '--------------------------------------------------------------------------------------
         'Metodo para mantener la consola abierta hasta que presione una letra
         Console.ReadKey() 'También podríamos utiliza Console.Read() Console.ReadLine() 
@@ -369,6 +372,20 @@ Module Module1
             Console.WriteLine("i = " & i)
             i += 1
         End While
+    End Sub
+
+    Public Sub Arreglos()
+        ' Un arreglo es un grupo de elementos del mismo tipo, ordenados y finitos
+        ' Ejemplo: [9,1,2,3,7,5,8] La longitud del arreglo es de 7, la posición de cada elemento es el indice. Por ejemplo el valor del indice en la posición 0 es 9
+
+        Dim arreglo = New Integer() {9, 1, 2, 3, 7, 5, 8}
+
+        Console.WriteLine("El valor del elemento en el indice 4 es: " & arreglo(3))
+        Console.WriteLine("La longitud del arreglo es: " & arreglo.Length)
+
+        For i = 0 To arreglo.Length - 1
+            Console.WriteLine("El valor del elemento es: " & arreglo(i) & " en el indice " & i + 1)
+        Next
     End Sub
 
 End Module
