@@ -437,49 +437,9 @@ Module Module1
     ' En POO podemos definitr si los atributo o metodos son "PUBLIC" o "PRIVATE", con esto podemos determinar cuales de ellos pueden ser
     ' utlizados por cualquer persona (public) o si por el contrario debe tener un tipo de acceso.
 
-    Class Auto
-        'Atributos (caracteristicas)
-        Public color = ""
-        Private modelo = 0
-        Public marca = ""
-        Private acceso = False
-
-        ' Metodos (funcionalidades)
-        Public Sub meterLlave(llave As String)
-            If llave = "1234" Then
-                acceso = True
-                Console.WriteLine("Llave correcta")
-            Else
-                acceso = False
-                Console.WriteLine("Llave incorrecta")
-            End If
-        End Sub
-
-        Public Sub mando(accion As String)
-            If acceso = True Then
-                If accion = "Acelerar" Then
-                    acelerarAuto()
-                End If
-            Else
-                Console.WriteLine("No se puede hacer la accion: " & accion)
-            End If
-        End Sub
-
-        Public Sub encenderAuto()
-            Console.WriteLine("Auto encendido sin problema.")
-        End Sub
-
-        Private Sub acelerarAuto()
-            Console.WriteLine("El auto acelera sin problema")
-        End Sub
-
-        Public Sub frenarAuto()
-            Console.WriteLine("El auto frena sin problema")
-        End Sub
-    End Class
 
     Sub instanciarAuto()
-        Dim carroInstancia1 = New Auto() ' Instancia
+        Dim carroInstancia1 = New clsAuto() ' Instancia
 
         carroInstancia1.color = "Verde"
         'carroInstancia1.modelo = 2016
@@ -493,7 +453,7 @@ Module Module1
         'Console.WriteLine("El carro instancia 1, tiene un color " & carroInstancia1.color & " y es modelo " & carroInstancia1.modelo)
 
 
-        Dim carroInstancia2 = New Auto() ' Instancia
+        Dim carroInstancia2 = New clsAuto() ' Instancia
         carroInstancia2.color = "Gris"
         'carroInstancia2.modelo = 2023
 
