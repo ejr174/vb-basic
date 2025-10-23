@@ -10,8 +10,11 @@ Module Module1
         'Console.WriteLine("------------ POO: CLASE CALCULADORA -----------")
         'intanciarClsCalculadora()
 
-        Console.WriteLine("------------ POO: CLASE PERSONA -----------")
-        instanciarClsPersona()
+        'Console.WriteLine("------------ POO: CLASE PERSONA -----------")
+        'instanciarClsPersona()
+
+        Console.WriteLine("------------ POO: CLASE VEHICULO -----------")
+        instanciarClcVehiculo()
         '--------------------------------------------------------------------------------------
         'Metodo para mantener la consola abierta hasta que presione una letra
         Console.ReadKey() 'También podríamos utiliza Console.Read() Console.ReadLine() 
@@ -91,6 +94,15 @@ Module Module1
 
         'persona1.inicializar("Emmanuel", 29)
         persona1.mostrarInfoPersona()
+    End Sub
+
+    Sub instanciarClcVehiculo()
+        Dim vehiculo1 = New clsVehiculo("Nissan", "2019")
+        vehiculo1.acelera()
+        vehiculo1.acelera(23)
+
+        Dim vehiculo2 = New clsVehiculo("sku5362")
+        vehiculo2.acelera()
     End Sub
 
 End Module
