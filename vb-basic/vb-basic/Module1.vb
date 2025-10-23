@@ -10,6 +10,8 @@ Module Module1
         'Console.WriteLine("------------ POO: CLASE CALCULADORA -----------")
         'intanciarClsCalculadora()
 
+        Console.WriteLine("------------ POO: CLASE PERSONA -----------")
+        instanciarClsPersona()
         '--------------------------------------------------------------------------------------
         'Metodo para mantener la consola abierta hasta que presione una letra
         Console.ReadKey() 'También podríamos utiliza Console.Read() Console.ReadLine() 
@@ -82,6 +84,13 @@ Module Module1
         resDouble = calculadoraPrincipal.dividir(num1, num2)
         Console.WriteLine("La divición de los números es " & resDouble)
 
+    End Sub
+
+    Sub instanciarClsPersona()
+        Dim persona1 = New clsPersona("Emmanuel", 29) ' El constructor obliga a ingresar la información de las propiedades de la clase cuando se intancia
+
+        'persona1.inicializar("Emmanuel", 29)
+        persona1.mostrarInfoPersona()
     End Sub
 
 End Module
