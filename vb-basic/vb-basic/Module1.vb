@@ -210,6 +210,9 @@ Module Module1
         Console.WriteLine("------------ POO: CLASE AUTO -----------")
         instanciarAuto()
 
+        Console.WriteLine("------------ POO: CLASE CALCULADORA -----------")
+        intanciarClsCalculadora()
+
         '--------------------------------------------------------------------------------------
         'Metodo para mantener la consola abierta hasta que presione una letra
         Console.ReadKey() 'También podríamos utiliza Console.Read() Console.ReadLine() 
@@ -458,6 +461,31 @@ Module Module1
         'carroInstancia2.modelo = 2023
 
         'Console.WriteLine("El carro instancia 2, tiene un color " & carroInstancia2.color & " y es modelo " & carroInstancia2.modelo)
+    End Sub
+
+    Sub intanciarClsCalculadora()
+
+        Dim calculadoraPrincipal = New clsCalculadora()
+        Dim res = 0
+        Dim resDouble = 0.0
+        Dim num1 = 1
+        Dim num2 = 2
+
+        Console.WriteLine("Bienvenido a tu calculadora de confianza")
+        Console.WriteLine("Los número a evaluar hoy son: num1 = " & num1 & " - num2 = " & num2)
+
+        res = calculadoraPrincipal.suma(num1, num2)
+        Console.WriteLine("La suma de los números es " & res)
+
+        res = calculadoraPrincipal.resta(num1, num2)
+        Console.WriteLine("La resta de los números es " & res)
+
+        res = calculadoraPrincipal.multiplicar(num1, num2)
+        Console.WriteLine("La multiplicación de los números es " & res)
+
+        resDouble = calculadoraPrincipal.dividir(num1, num2)
+        Console.WriteLine("La divición de los números es " & resDouble)
+
     End Sub
 
 End Module
