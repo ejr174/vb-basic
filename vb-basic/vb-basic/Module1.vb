@@ -13,8 +13,12 @@ Module Module1
         'Console.WriteLine("------------ POO: CLASE PERSONA -----------")
         'instanciarClsPersona()
 
-        Console.WriteLine("------------ POO: CLASE VEHICULO -----------")
-        instanciarClcVehiculo()
+        'Console.WriteLine("------------ POO: CLASE VEHICULO -----------")
+        'instanciarClcVehiculo()
+
+
+        Console.WriteLine("------------ POO: CLASE MATEMATICAS -----------")
+        instanciarMatematicas()
         '--------------------------------------------------------------------------------------
         'Metodo para mantener la consola abierta hasta que presione una letra
         Console.ReadKey() 'También podríamos utiliza Console.Read() Console.ReadLine() 
@@ -103,6 +107,15 @@ Module Module1
 
         Dim vehiculo2 = New clsVehiculo("sku5362")
         vehiculo2.acelera()
+    End Sub
+
+    Sub instanciarMatematicas()
+        Dim mat = New Trigonometria.clsMatematicas(5, 7)
+        Console.WriteLine("El resultado es = " & mat.suma())
+
+        Dim personjeX = New Trigonometria.clsPersonajes()
+        personjeX.decirPersonaje()
+
     End Sub
 
 End Module
