@@ -16,9 +16,12 @@ Module Module1
         'Console.WriteLine("------------ POO: CLASE VEHICULO -----------")
         'instanciarClcVehiculo()
 
+        'Console.WriteLine("------------ POO: CLASE MATEMATICAS -----------")
+        'instanciarMatematicas()
 
-        Console.WriteLine("------------ POO: CLASE MATEMATICAS -----------")
-        instanciarMatematicas()
+
+        Console.WriteLine("------------ POO: CLASE EMPLEADO -----------")
+        intanciarClsEmpleado()
         '--------------------------------------------------------------------------------------
         'Metodo para mantener la consola abierta hasta que presione una letra
         Console.ReadKey() 'También podríamos utiliza Console.Read() Console.ReadLine() 
@@ -118,5 +121,17 @@ Module Module1
 
     End Sub
 
+
+    Sub intanciarClsEmpleado()
+        Dim empleado1 = New Encapsulamiento.clsEmpleado()
+
+        empleado1.setNombre("Itachi Uchija")
+        Dim nombreEmpleado = empleado1.getNombre()
+
+        empleado1.setEdad(29)
+        Dim edadEmpleado As String = empleado1.getEdad()
+
+        Console.WriteLine("El empleado del mes se llama " & nombreEmpleado & " y tiene una edad de " & edadEmpleado)
+    End Sub
 End Module
 
