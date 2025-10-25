@@ -74,6 +74,7 @@
     <Compile Include="clsConceptosBasicos.vb" />
     <Compile Include="clsEmpleado.vb" />
     <Compile Include="clsMatematicas.vb" />
+    <Compile Include="clsMiClase.vb" />
     <Compile Include="clsPersona.vb" />
     <Compile Include="clsVehiculo.vb" />
     <Compile Include="Module1.vb" />

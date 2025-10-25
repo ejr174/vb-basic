@@ -19,9 +19,11 @@ Module Module1
         'Console.WriteLine("------------ POO: CLASE MATEMATICAS -----------")
         'instanciarMatematicas()
 
+        'Console.WriteLine("------------ POO: CLASE EMPLEADO -----------")
+        'intanciarClsEmpleado()
 
-        Console.WriteLine("------------ POO: CLASE EMPLEADO -----------")
-        intanciarClsEmpleado()
+        Console.WriteLine("------------ POO: CLASE MiClase que contiene información sobre atributos estátcos -----------")
+        instanciarAtributosEstaticos()
         '--------------------------------------------------------------------------------------
         'Metodo para mantener la consola abierta hasta que presione una letra
         Console.ReadKey() 'También podríamos utiliza Console.Read() Console.ReadLine() 
@@ -132,6 +134,31 @@ Module Module1
         Dim edadEmpleado As String = empleado1.getEdad()
 
         Console.WriteLine("El empleado del mes se llama " & nombreEmpleado & " y tiene una edad de " & edadEmpleado)
+    End Sub
+
+    Sub instanciarAtributosEstaticos()
+        clsMiClase.saludo()
+
+        Dim obj1 = New clsMiClase()
+        Dim obj2 = New clsMiClase()
+
+        Console.WriteLine("Atributo normal obj1 = " & obj1.normal)
+        Console.WriteLine("Atributo normal obj2 = " & obj2.normal)
+
+        obj1.normal = "Cambio desde módulo principal"
+        obj2.normal = "Cambio desde módulo principal"
+
+        Console.WriteLine("Atributo normal modificado obj1 = " & obj1.normal)
+        Console.WriteLine("Atributo normal modificado obj2 = " & obj2.normal)
+
+        Console.WriteLine("Estáticos")
+        Console.WriteLine("Atributo Estático obj1 = " & obj1.estatico)
+        Console.WriteLine("Atributo Estático obj2 = " & obj2.estatico)
+
+        obj2.estatico = "Cambio desde módulo principal al Estático obj2" ' Con modificar aqui, todas las intancias tambien recibiran el cambio
+
+        Console.WriteLine("Atributo Estático modificado obj1 = " & obj1.estatico)
+        Console.WriteLine("Atributo Estático modificado obj2 = " & obj2.estatico)
     End Sub
 End Module
 
