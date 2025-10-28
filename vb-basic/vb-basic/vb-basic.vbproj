@@ -76,7 +76,9 @@
     <Compile Include="clsMatematicas.vb" />
     <Compile Include="clsMiClase.vb" />
     <Compile Include="clsPersona.vb" />
+    <Compile Include="clsPersonas.vb" />
     <Compile Include="clsVehiculo.vb" />
+    <Compile Include="Estudiantes.vb" />
     <Compile Include="Module1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

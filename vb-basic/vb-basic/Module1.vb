@@ -22,8 +22,11 @@ Module Module1
         'Console.WriteLine("------------ POO: CLASE EMPLEADO -----------")
         'intanciarClsEmpleado()
 
-        Console.WriteLine("------------ POO: CLASE MiClase que contiene información sobre atributos estátcos -----------")
-        instanciarAtributosEstaticos()
+        'Console.WriteLine("------------ POO: CLASE MiClase que contiene información sobre atributos estátcos -----------")
+        'instanciarAtributosEstaticos()
+
+        Console.WriteLine("------------ POO: HERENCIA -----------")
+        instanciarHerenciaPOO()
         '--------------------------------------------------------------------------------------
         'Metodo para mantener la consola abierta hasta que presione una letra
         Console.ReadKey() 'También podríamos utiliza Console.Read() Console.ReadLine() 
@@ -159,6 +162,17 @@ Module Module1
 
         Console.WriteLine("Atributo Estático modificado obj1 = " & obj1.estatico)
         Console.WriteLine("Atributo Estático modificado obj2 = " & obj2.estatico)
+    End Sub
+
+    Sub instanciarHerenciaPOO()
+
+        Dim persona1 = New clsPersonas("Emmanuel", "Jaramillo", 29)
+
+        Console.WriteLine("El nombre de la instancia persona1 es:" & persona1.getFirtsName & " " & persona1.getLastName & ". Tiene la edad de " & persona1.getAge)
+
+        Dim estudiante1 = New Estudiantes("Juan", "Perez", 30, "123", 4.2)
+
+        Console.WriteLine("El nombre de la instancia estudiante1 es:" & estudiante1.getFirtsName & " " & estudiante1.getLastName & ". Tiene la edad de " & estudiante1.getAge & vbCrLf & "El código del estudiante es: " & estudiante1.getCodigoEstudiante & ". Su calificación fue de: " & estudiante1.getCalificacion)
     End Sub
 End Module
 
