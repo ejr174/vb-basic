@@ -70,6 +70,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animal.vb" />
+    <Compile Include="Automotores.vb" />
+    <Compile Include="Camiones.vb" />
+    <Compile Include="Carros.vb" />
     <Compile Include="clsAuto.vb" />
     <Compile Include="clsCalculadora.vb" />
     <Compile Include="clsConceptosBasicos.vb" />
@@ -79,9 +82,12 @@
     <Compile Include="clsPersona.vb" />
     <Compile Include="clsPersonas.vb" />
     <Compile Include="clsVehiculo.vb" />
+    <Compile Include="Diesel.vb" />
     <Compile Include="Estudiantes.vb" />
+    <Compile Include="Gasolina.vb" />
     <Compile Include="Humano.vb" />
     <Compile Include="Module1.vb" />
+    <Compile Include="Motos.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

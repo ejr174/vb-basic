@@ -28,7 +28,9 @@ Module Module1
         'Console.WriteLine("------------ POO: HERENCIA -----------")
         'instanciarHerenciaPOO()
 
-        instanciarSobreEscrituraMetodo()
+        'instanciarSobreEscrituraMetodo()
+
+        clasesAbstractas()
         '--------------------------------------------------------------------------------------
         'Metodo para mantener la consola abierta hasta que presione una letra
         Console.ReadKey() 'También podríamos utiliza Console.Read() Console.ReadLine() 
@@ -201,6 +203,32 @@ Module Module1
         Dim perro = New Perro
         perro.comer()
         perro.correr()
+    End Sub
+
+    Public Sub clasesAbstractas()
+        ' Para que una clase se considere abstracta debe cumplor con las siguientes condiciones:
+        ' 1. No se puede instanciar. 2. Deber tener una clase hija, osea debe heredad. 3. Solo sirve para heredar metodos y atributos
+
+        ' Otra caracterisitca importante es que la super clase o clase padre debe tener la palabra reservada "MustInherit" asi -> Public MustInherit Class Automotores
+        ' Esta indica que esta clase debe heredar
+
+        ' Para crear los metodos dentro de la clase padre debemos utilizar la palabra reservada "MustOverride" asi -> Public MustOverride Sub llantas()
+        ' Esta indica que el metodo debe sobrescrito por la clase hija
+
+        'Intentando instancia una clase abstracta -> Saca error
+        'Dim claseAbs = New Automotores()
+        'claseAbs.llantas()
+
+        Dim moto1 = New Motos
+        moto1.llantas()
+
+        Dim carro1 = New Carros
+        carro1.llantas()
+
+        Dim camion1 = New Camiones
+        camion1.llantas()
+
+
     End Sub
 End Module
 
