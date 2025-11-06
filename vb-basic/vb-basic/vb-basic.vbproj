@@ -69,6 +69,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Animal.vb" />
     <Compile Include="clsAuto.vb" />
     <Compile Include="clsCalculadora.vb" />
     <Compile Include="clsConceptosBasicos.vb" />
@@ -79,6 +80,7 @@
     <Compile Include="clsPersonas.vb" />
     <Compile Include="clsVehiculo.vb" />
     <Compile Include="Estudiantes.vb" />
+    <Compile Include="Humano.vb" />
     <Compile Include="Module1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -95,6 +97,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Pajaro.vb" />
+    <Compile Include="Perro.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

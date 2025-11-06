@@ -25,8 +25,10 @@ Module Module1
         'Console.WriteLine("------------ POO: CLASE MiClase que contiene información sobre atributos estátcos -----------")
         'instanciarAtributosEstaticos()
 
-        Console.WriteLine("------------ POO: HERENCIA -----------")
-        instanciarHerenciaPOO()
+        'Console.WriteLine("------------ POO: HERENCIA -----------")
+        'instanciarHerenciaPOO()
+
+        instanciarSobreEscrituraMetodo()
         '--------------------------------------------------------------------------------------
         'Metodo para mantener la consola abierta hasta que presione una letra
         Console.ReadKey() 'También podríamos utiliza Console.Read() Console.ReadLine() 
@@ -173,6 +175,32 @@ Module Module1
         Dim estudiante1 = New Estudiantes("Juan", "Perez", 30, "123", 4.2)
 
         Console.WriteLine("El nombre de la instancia estudiante1 es:" & estudiante1.getFirtsName & " " & estudiante1.getLastName & ". Tiene la edad de " & estudiante1.getAge & vbCrLf & "El código del estudiante es: " & estudiante1.getCodigoEstudiante & ". Su calificación fue de: " & estudiante1.getCalificacion)
+    End Sub
+
+    Public Sub instanciarSobreEscrituraMetodo()
+        ' La sobre escritura de metodo (override) se refiere a la posibilidad de que una clase hija (sub clase) tenga el mismo nombre de un metodo que ya tenga la clase Padre pero
+        ' Tiene un comportarmiento diferente.
+
+        ' Para poder sobre escribir un metodo de una clase padre en una clase hija primero debemos indicar que este se puede sobreescribir.
+        ' Para lograr esto debemos poner Overridable en el metodo de la clase principal, y  Overrides en el metodo de la clase hija - Ejm: Clase Padre - Public Overridable Sub nombreMetodo() | Clase Hija -> Public Overrides Sub nombreMetodo()
+
+        Console.WriteLine("SobreEscritura de Metodos - Override")
+
+        Dim animal = New Animal
+        animal.comer()
+        animal.correr()
+
+        Dim humano = New Humano
+        humano.correr()
+        humano.comer()
+
+        Dim pajaro = New Pajaro
+        pajaro.comer()
+        pajaro.volar()
+
+        Dim perro = New Perro
+        perro.comer()
+        perro.correr()
     End Sub
 End Module
 
