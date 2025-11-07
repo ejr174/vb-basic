@@ -30,7 +30,9 @@ Module Module1
 
         'instanciarSobreEscrituraMetodo()
 
-        clasesAbstractas()
+        'clasesAbstractas()
+
+
         '--------------------------------------------------------------------------------------
         'Metodo para mantener la consola abierta hasta que presione una letra
         Console.ReadKey() 'También podríamos utiliza Console.Read() Console.ReadLine() 
@@ -227,8 +229,8 @@ Module Module1
 
         Dim camion1 = New Camiones
         camion1.llantas()
-
-
     End Sub
+
+
 End Module
 
