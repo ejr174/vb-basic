@@ -32,7 +32,7 @@ Module Module1
 
         'clasesAbstractas()
 
-
+        listaDinamica()
         '--------------------------------------------------------------------------------------
         'Metodo para mantener la consola abierta hasta que presione una letra
         Console.ReadKey() 'También podríamos utiliza Console.Read() Console.ReadLine() 
@@ -231,6 +231,40 @@ Module Module1
         camion1.llantas()
     End Sub
 
+    Sub listaNormal()
+        Console.WriteLine("Usuario, por favor ingresa la cantida de elementos que tendra la lista")
+        Dim numElementos = Integer.Parse(Console.ReadLine())
 
+        Dim listaElementos = New String(numElementos - 1) {}
+
+        For i = 0 To numElementos - 1
+            Console.WriteLine("Usuario por favor ingrese el elemento #" & i + 1)
+            listaElementos(i) = Console.ReadLine()
+        Next
+
+        For Each elemento In listaElementos
+            Console.WriteLine(elemento)
+        Next
+    End Sub
+
+    Sub listaDinamica()
+        Dim listaElemento = New ArrayList()
+        Dim resp As Char
+        Dim i = 0
+
+        Do
+            Console.WriteLine("Usuario ingrese el valor de la lista en la posición: " & i + 1)
+            listaElemento.Add(Console.ReadLine())
+
+            Console.WriteLine("Dese seguir agregando elemento a la lista?  s/n ")
+            resp = Console.ReadLine()(0)
+
+            i += 1
+        Loop While (resp = "s" Or resp = "S")
+
+        For Each element In listaElemento
+            Console.WriteLine(element)
+        Next
+    End Sub
 End Module
 
