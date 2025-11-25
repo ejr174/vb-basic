@@ -12,7 +12,33 @@
         ' IsNot
         ' Like
 
-        selectCase()
+        ' Operadores logicos
+        ' AND
+        ' OR
+        ' NOT
+        ' AndAlso
+        ' OrAlso
+        ' Xor
+
+
+        ' Logica para poder ejecutar el cajero si la tarjeta y la contrasena es valida      
+        Dim tarjetaValida As String = "960505"
+        Dim contrasenaValida As String = "1234"
+
+        Console.WriteLine("Por favor introduzca su tarjeta... ")
+        Dim usuarioTarjeta As String = Console.ReadLine()
+
+        Console.WriteLine("---------------------------------------")
+
+        Console.WriteLine("Por favor introduzca su contraseña...")
+        Dim usuarioContrasena As String = Console.ReadLine()
+
+        If usuarioTarjeta = tarjetaValida And usuarioContrasena = contrasenaValida Then
+            condicionalIf()
+        Else
+            Console.WriteLine("-------------------- ERROR -----------------")
+            Console.WriteLine("ERROR: La tarjeta o contraseña introducida no es valida")
+        End If
 
         Console.ReadKey()
 
