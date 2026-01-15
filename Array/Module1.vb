@@ -25,4 +25,32 @@
 
     End Sub
 
+    Sub DimensionesArray()
+
+        'Array unidimencional
+        Dim equipos(2) As String
+
+        equipos(0) = "Atl.Nacional"
+        equipos(1) = "Real Madrid"
+        equipos(2) = "Liverpool"
+
+        Console.WriteLine(1) ' Imprime real madrid
+
+        'Array Bidimencional (fila,columna)
+        Dim jugadores(1, 2) As String
+
+        jugadores(0, 0) = "Cristiano"
+        jugadores(0, 1) = "Luchito Diaz"
+        jugadores(0, 2) = "Neymar"
+
+        jugadores(1, 0) = "Alexis Mejia"
+        jugadores(1, 1) = "MAC"
+        jugadores(1, 2) = "GIO
+"
+        'Array tridimencional (rango,fila,columna) -> Max 32 tablas (rango)
+
+
+    End Sub
+
+
 End Module
