@@ -20,3 +20,6 @@ El encapsulamiento lo que hace es **ocultar** los **datos internos** de una Clas
 ### Modificadores de Acceso
 Son palabras claves (**Private, Protected, Public**) que **controlan** la **visibilidad y acceso** de los diferentes atributos, métodos y constructores de una clase.
 Son funadamentales para el encapsulamiento, protegiendo los datos de accesos externos no autorizados y definiendo que componentes son accesibles internamente o desde afuera.
+
+## Constructores
+El constructor es un metodo especial que se encarga de darle un estado inicial a un objeto.
