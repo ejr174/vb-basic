@@ -1,9 +1,11 @@
 ﻿Public Class clsPersonas
 
-#Region "Propiedades"
-    Private _nombre As String ' Campo de clase
+#Region "Propiedades y Atributos"
+    ' Campos de clase
+    Private _nombre As String
 
-    Public Property Nombre() As String ' Propiedad
+    ' Propiedad
+    Public Property Nombre() As String
         Get
             Return _nombre
         End Get
@@ -42,7 +44,7 @@
 #Region "Métodos"
 
     Public Sub Hablar()
-
+        Console.WriteLine("Nesito unas vacaciones y unas cervezas!!")
     End Sub
 
     Public Sub Comer()
