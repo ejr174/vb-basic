@@ -28,7 +28,7 @@ Son funadamentales para el encapsulamiento, protegiendo los datos de accesos ext
 
 ## Constructores
 
-El constructor es un metodo especial que se encarga de darle un estado inicial a un objeto.
+El constructor es un metodo especial que **se encarga de darle un estado inicial a un objeto**.
 
 ## Herencia
 
@@ -36,11 +36,11 @@ La Herencia en POO es un mecanimos clave donde una **clase (hija o subclase) adq
 
 ### Conceptos clave
 
-**Superclase (Clase Padre/Base)**: La clase original que provee atributos y métodos.
-**Subclase (Clase Hija/Derivada)**: La clase que hereda de la superclase y puede añadir o modificar características.
-**Reutilización de Código:** Evita escribir el mismo código varias veces, definiendo lo común una sola vez en la clase padre.
-**Jerarquía:** Crea relaciones lógicas de "es un" (ej. "un Automóvil es un Vehículo").
-**Extensibilidad:** Permite crear nuevas clases especializadas fácilmente.
+- **Superclase (Clase Padre/Base)**: La clase original que provee atributos y métodos.
+- **Subclase (Clase Hija/Derivada)**: La clase que hereda de la superclase y puede añadir o modificar características.
+- **Reutilización de Código:** Evita escribir el mismo código varias veces, definiendo lo común una sola vez en la clase padre.
+- **Jerarquía:** Crea relaciones lógicas de "es un" (ej. "un Automóvil es un Vehículo").
+- **Extensibilidad:** Permite crear nuevas clases especializadas fácilmente.
 
 ### Beneficios
 
@@ -55,3 +55,15 @@ La instrucción **Inherits** se usa para declarar una nueva clase, denominada cl
 ### La Palabra clave MyBase
 
 La palabra clave **MyBase** se comporta como una variable de objeto que **hace referencia a la clase base de la instancia actual de una clase**. MyBase **se usa** normalmente para **acceder a los miembros de la clase base** que se invalidan o se reemplazan en una clase derivada. En concreto, MyBase.New se usa para llamar explícitamente a un constructor de clase base desde un constructor de clase derivada.
+
+## Campos de clase estáticos (SHARED)
+
+En VB.NET los campos de clase estáticos **se definen con la palabra clase SHARED**(Compartido). Estos **pertenecen a la clase** en sí y **NO a una instancia** especifica.
+
+### Puntos clave:
+
+- **Acceso directo**: No es necesario crea un objeto con "New" para usarlos; Accedes mediante "NombreClase.Campo"
+- **Instancia única**: Solo existe una copia del campo en memoria, compartida por todas las intancias de la clase.
+- **Inicialización**: Se cargan cuando se accede a la clase por primera vez.
+
+## Clases estáticas (STATIC MODULE MODULOS)
