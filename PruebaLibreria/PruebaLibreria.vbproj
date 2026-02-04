@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>PruebaLibreria</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="miLibreria">
+      <HintPath>..\..\..\..\Users\ejaramillor\OneDrive - TCC\Escritorio\miLibreria.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

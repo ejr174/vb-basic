@@ -77,3 +77,21 @@ Es un contenedor de código que se comporta como una "Clase Estatica" pura. A di
 * **Acceso directo (Scope)**: Los miembros de un módulo son accesibles directamente por su nombre en todo el proyecto, sin necesitad de anteponer el nombre del módulo (ej. Puedes llamar a Mifuncion() en lugar de MiModulo.MiFuncion()).
 * **Uso común**: Se utilizan para funciones de utilidad, variables globales controladas o para definir método de extensión.
 
+## Libreria/Biblioteca de Clases (Class Library)
+Una biblioteca de clases es un **contenedor de código pre-escrito** que no se ejecuta por si solo, sino que **sirve para ser utilizado por otros programas**.
+Imaginalo como una "Caja de herramientas" que **preparas una vez y luego la puedes llevar a cualquier proyecto** para no tener que reinventar la rueda.
+
+### ¿Qué contiene exactamente?
+Una biblioteca de clases se compila en un **archivo con extensión ".dll" (Dynamic Link Library)**. Dentro de ellas puedes organizar:
+* **Clases**: Plantillas para objetos.
+* **Interfaces**: Contratos que definen comportamientos.
+* **Estructuras y Enums**: Tipos de datos personalizados.
+* **Módulos**: Contenedores de funciones utilitarias.
+
+### ¿Por qué son fundamentales en POO?
+El uso de librerías es la máxima expresión de varios pilares de la programación profesional:
+
+* **Reutilización de Código**: Escribes la lógica compleja una vez y la referencias en diez proyectos distintos.
+* **Mantenibilidad**: Si hay un error en la lógica de cálculo, lo corriges en la librería y todos los programas que la usan se actualizan al recompilar.
+* **Encapsulamiento**: Puedes ocultar la complejidad interna usando modificadores de acceso como Friend (solo visible dentro de la librería) o Public (visible para otros proyectos).
+* **Abstracción**: El programador que usa tu librería solo necesita saber qué hace el método (ej. .EnviarEmail()), no cómo lo hace por dentro.

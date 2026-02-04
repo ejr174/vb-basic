@@ -3,4 +3,5 @@
   <Project Path="ClasesObjetos/ClasesObjetos.vbproj" />
   <Project Path="Constructores/Constructores.vbproj" />
   <Project Path="Estaticos/Estaticos.vbproj" Id="b6af3d3b-fb26-45f4-ab40-5ab2164397a0" />
+  <Project Path="miLibreria/miLibreria.vbproj" Id="f8f5d384-6d0e-430d-8805-51e9e69f5c6c" />
 </Solution>
