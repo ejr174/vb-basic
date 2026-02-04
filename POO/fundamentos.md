@@ -66,4 +66,14 @@ En VB.NET los campos de clase estáticos **se definen con la palabra clase SHARE
 - **Instancia única**: Solo existe una copia del campo en memoria, compartida por todas las intancias de la clase.
 - **Inicialización**: Se cargan cuando se accede a la clase por primera vez.
 
-## Clases estáticas (STATIC MODULE MODULOS)
+## Clases estáticas (STATIC o MODULE )
+En VB.NET **no existe la palabra clave Static Class** cómo en el lenguaje C#. En su lugar **el concepto equivalente es el "MODULE"**.
+
+### ¿Qué es un Módulo (Module)?
+Es un contenedor de código que se comporta como una "Clase Estatica" pura. A diferencia de las clases normales, los módulos tienen características únicas:
+
+* **Implícitamente SHARED**: TODOS los métodos, variables y propiedades dentro de un módulo son compartidas automáticamente. No necesitas escribir la palabra clase Shared.
+* **No instanciables**: No puedes crear un objeto de un módulo usando "New". Exisre una única instancia "global" gestionada por el sistema.
+* **Acceso directo (Scope)**: Los miembros de un módulo son accesibles directamente por su nombre en todo el proyecto, sin necesitad de anteponer el nombre del módulo (ej. Puedes llamar a Mifuncion() en lugar de MiModulo.MiFuncion()).
+* **Uso común**: Se utilizan para funciones de utilidad, variables globales controladas o para definir método de extensión.
+

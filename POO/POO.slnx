@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="ClasesEstaticas/ClasesEstaticas.vbproj" Id="8e56e608-0fe6-443b-9819-30e3c40f9044" />
   <Project Path="ClasesObjetos/ClasesObjetos.vbproj" />
   <Project Path="Constructores/Constructores.vbproj" />
   <Project Path="Estaticos/Estaticos.vbproj" Id="b6af3d3b-fb26-45f4-ab40-5ab2164397a0" />
