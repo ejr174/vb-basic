@@ -245,7 +245,6 @@ Partial Class frmPrincipal
         Me.txtDisplay.Name = "txtDisplay"
         Me.txtDisplay.Size = New System.Drawing.Size(278, 56)
         Me.txtDisplay.TabIndex = 19
-        Me.txtDisplay.Text = "0"
         Me.txtDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'lblAuxiliar
@@ -256,7 +255,6 @@ Partial Class frmPrincipal
         Me.lblAuxiliar.Name = "lblAuxiliar"
         Me.lblAuxiliar.Size = New System.Drawing.Size(278, 28)
         Me.lblAuxiliar.TabIndex = 20
-        Me.lblAuxiliar.Text = "0"
         Me.lblAuxiliar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'frmPrincipal
